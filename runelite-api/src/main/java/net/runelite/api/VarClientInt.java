@@ -53,6 +53,11 @@ public enum VarClientInt
 	INPUT_TYPE(5),
 
 	/**
+	 *  Current selected chatbox tab
+	 */
+	CHATBOX_TAB(41),
+
+	/**
 	 * The game sets this to the same value as {@link #CAMERA_ZOOM_RESIZABLE_VIEWPORT}
 	 */
 	CAMERA_ZOOM_FIXED_VIEWPORT(73),
