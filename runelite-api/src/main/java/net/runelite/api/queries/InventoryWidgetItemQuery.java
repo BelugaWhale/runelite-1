@@ -65,7 +65,7 @@ public class InventoryWidgetItemQuery extends WidgetItemQuery
 		for (WidgetInfo widgetInfo : INVENTORY_WIDGET_INFOS)
 		{
 			Widget inventory = client.getWidget(widgetInfo);
-			if (inventory == null || inventory.isHidden())
+			if (inventory == null || (inventory.isHidden() && widgetInfo != WidgetInfo.INVENTORY))
 			{
 				continue;
 			}

@@ -25,6 +25,7 @@
 package net.runelite.api.queries;
 
 import static java.lang.Math.abs;
+import java.util.Arrays;
 import java.util.function.Predicate;
 import net.runelite.api.Locatable;
 import net.runelite.api.LocatableQueryResults;
@@ -34,6 +35,13 @@ import net.runelite.api.coords.WorldPoint;
 
 public abstract class LocatableQuery<EntityType extends Locatable, QueryType> extends Query<EntityType, QueryType, LocatableQueryResults<EntityType>>
 {
+	@SuppressWarnings("unchecked")
+	public QueryType notAtWorldLocation(WorldPoint[] locations)
+	{
+		predicate = and(object -> !Arrays.stream(locations).anyMatch(x -> x.equals(object.getWorldLocation())));
+		return (QueryType) this;
+	}
+
 	@SuppressWarnings("unchecked")
 	public QueryType atWorldLocation(WorldPoint location)
 	{

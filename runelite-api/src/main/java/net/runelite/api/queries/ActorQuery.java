@@ -24,6 +24,7 @@
  */
 package net.runelite.api.queries;
 
+import java.util.Optional;
 import java.util.function.Predicate;
 import net.runelite.api.Actor;
 import net.runelite.api.coords.WorldPoint;
@@ -83,7 +84,7 @@ public abstract class ActorQuery<EntityType extends Actor, QueryType> extends Lo
 	@SuppressWarnings("unchecked")
 	public QueryType isInteractingWith(Actor actor)
 	{
-		predicate = and(a -> a.getInteracting().equals(actor));
+		predicate = and(a -> Optional.ofNullable(a.getInteracting()).map(x -> x.equals(actor)).orElse(false));
 		return (QueryType) this;
 	}
 

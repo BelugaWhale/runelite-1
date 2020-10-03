@@ -1894,6 +1894,18 @@ public interface Client extends GameShell
 
 	int getSelectedSpellFlags();
 
+	int getSelectedSceneTileX();
+
+	void setSelectedSceneTileX(int var1);
+
+	int getSelectedSceneTileY();
+
+	void setSelectedSceneTileY(int var1);
+
+	void setCheckClick(boolean b);
+
+	void setViewportWalking(boolean b);
+
 	/**
 	 * Set whether or not player attack options will be hidden for friends
 	 */

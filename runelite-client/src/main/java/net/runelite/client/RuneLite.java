@@ -252,6 +252,9 @@ public class RuneLite
 		parser.accepts("no-splash", "Do not show the splash screen");
 		parser.accepts("insecure-skip-tls-verification", "Disables TLS verification");
 
+		final ArgumentAcceptingOptionSpec<String> aliasInfo = parser
+				.accepts("alias")
+				.withRequiredArg().ofType(String.class);
 		final ArgumentAcceptingOptionSpec<String> proxyInfo = parser
 			.accepts("proxy")
 			.withRequiredArg().ofType(String.class);
@@ -301,6 +304,12 @@ public class RuneLite
 		{
 			final Logger logger = (Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
 			logger.setLevel(Level.DEBUG);
+		}
+
+		if (options.has("alias"))
+		{
+			System.setProperty("alias", options.valueOf(aliasInfo));
+			log.info("The following alias has been received from the command line: "+System.getProperty("alias"));
 		}
 
 		if (options.has("proxy"))

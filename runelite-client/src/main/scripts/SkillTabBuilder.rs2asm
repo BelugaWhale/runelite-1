@@ -12,8 +12,10 @@
    iload                  0
    stat                  
    tostring              
-   cc_settext            
+   cc_settext
    iload                  0
+   sconst                 "skillTabBoostLevel" ; push event name
+   runelite_callback     ; invoke callback
    stat_base             
    istore                 4
    iload                  0                   ; load the skill id from arguments
@@ -57,7 +59,9 @@ LABEL39:
    iload                  4
    iconst                 1
    add                   
-   enum                  
+   enum
+   sconst                 "skillTabNextLevelXP"   ; push event name
+   runelite_callback     ; invoke callback
    istore                 6
    sload                  2
    sconst                 "|Next level at:|Remaining XP:"

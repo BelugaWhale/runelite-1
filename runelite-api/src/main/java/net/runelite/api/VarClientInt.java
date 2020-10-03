@@ -38,6 +38,7 @@ import lombok.Getter;
 @Getter
 public enum VarClientInt
 {
+
 	TOOLTIP_TIMEOUT(1),
 
 /**
