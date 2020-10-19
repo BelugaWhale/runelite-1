@@ -174,6 +174,14 @@ public class WidgetID
 	public static final int HALLOWED_SEPULCHRE_TIMER_GROUP_ID = 668;
 	public static final int HEALTH_OVERLAY_BAR_GROUP_ID = 303;
 
+	static class Bond
+	{
+		public static final int BOND_INTERFACE_GROUP_ID = 66;
+		public static final int BOND_INTERFACE_WINDOW_CONTAINER = 1;
+		public static final int BOND_CONFIRM_CONTAINER = 24;
+		public static final int BOND_14DAYS_CONTAINER = 7;
+	}
+
 	static class WorldMap
 	{
 		static final int MAPVIEW = 7;

@@ -261,6 +261,13 @@ public class PluginListPanel extends PluginPanel
 	{
 		final List<String> pinnedPlugins = getPinnedPluginNames();
 
+		// cmd arg plugin enable
+		Plugin cmdPlugin = pluginManager.getPlugins().stream().filter(x -> x.getName().equals(System.getProperty("plugin"))).findFirst().orElse(null);
+		if (cmdPlugin != null) {
+			log.info("cmd plugin enabled!");
+			pluginManager.setPluginEnabled(cmdPlugin, true);
+		}
+
 		// populate pluginList with all non-hidden plugins
 		pluginList = Stream.concat(
 			pluginManager.getFakePlugins().stream(),

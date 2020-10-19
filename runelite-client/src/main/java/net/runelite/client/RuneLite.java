@@ -261,6 +261,12 @@ public class RuneLite
 		final ArgumentAcceptingOptionSpec<Integer> worldInfo = parser
 			.accepts("world")
 			.withRequiredArg().ofType(Integer.class);
+		final ArgumentAcceptingOptionSpec<String> pluginInfo = parser
+				.accepts("plugin")
+				.withRequiredArg().ofType(String.class);
+		final ArgumentAcceptingOptionSpec<String> geProfileInfo = parser
+				.accepts("geProfile")
+				.withRequiredArg().ofType(String.class);
 		final ArgumentAcceptingOptionSpec<File> configfile = parser.accepts("config", "Use a specified config file")
 			.withRequiredArg()
 			.withValuesConvertedBy(new ConfigFileConverter())
@@ -346,6 +352,19 @@ public class RuneLite
 		{
 			int world = options.valueOf(worldInfo);
 			System.setProperty("cli.world", String.valueOf(world));
+			log.info("The following world has been received from the command line: "+System.getProperty("cli.world"));
+		}
+
+		if (options.has("plugin"))
+		{
+			System.setProperty("plugin", options.valueOf(pluginInfo));
+			log.info("The following plugin has been received from the command line: "+System.getProperty("plugin"));
+		}
+
+		if (options.has("geProfile"))
+		{
+			System.setProperty("geProfile", options.valueOf(geProfileInfo));
+			log.info("The following geProfile has been received from the command line: "+System.getProperty("geProfile"));
 		}
 
 		final File configFile = resolveLinks(options.valueOf(configfile));
@@ -504,13 +523,14 @@ public class RuneLite
 		RuneLiteSplashScreen.stage(.77, "Starting core interface");
 		clientSessionManager.start();
 
-		//Set the world if specified via CLI args - will not work until clientUI.init is called
-		Optional<Integer> worldArg = Optional.ofNullable(System.getProperty("cli.world")).map(Integer::parseInt);
-		worldArg.ifPresent(this::setWorld);
-
 		// Initialize UI
 		RuneLiteSplashScreen.stage(.80, "Initialize UI");
 		clientUI.init();
+
+		//Set the world if specified via CLI args - will not work until clientUI.init is called
+		log.info("Setting world...");
+		Optional<Integer> worldArg = Optional.ofNullable(System.getProperty("cli.world")).map(Integer::parseInt);
+		worldArg.ifPresent(this::setWorld);
 
 		// Initialize Discord service
 		discordService.init();
