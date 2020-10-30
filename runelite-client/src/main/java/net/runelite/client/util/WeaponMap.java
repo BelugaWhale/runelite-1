@@ -145,8 +145,11 @@ public class WeaponMap
 		StyleMap.put(ItemID.CRYSTAL_HALBERD_810_I, WeaponStyle.MELEE);
 		StyleMap.put(ItemID.CRYSTAL_HALBERD_910, WeaponStyle.MELEE);
 		StyleMap.put(ItemID.CRYSTAL_HALBERD_910_I, WeaponStyle.MELEE);
+		StyleMap.put(ItemID.CRYSTAL_HALBERD_ATTUNED, WeaponStyle.MELEE);
+		StyleMap.put(ItemID.CRYSTAL_HALBERD_BASIC, WeaponStyle.MELEE);
 		StyleMap.put(ItemID.CRYSTAL_HALBERD_FULL, WeaponStyle.MELEE);
 		StyleMap.put(ItemID.CRYSTAL_HALBERD_FULL_I, WeaponStyle.MELEE);
+		StyleMap.put(ItemID.CRYSTAL_HALBERD_PERFECTED, WeaponStyle.MELEE);
 		StyleMap.put(ItemID.CURSED_GOBLIN_HAMMER, WeaponStyle.MELEE);
 		StyleMap.put(ItemID.DARKLIGHT, WeaponStyle.MELEE);
 		StyleMap.put(ItemID.DARK_DAGGER, WeaponStyle.MELEE);
@@ -528,8 +531,11 @@ public class WeaponMap
 		StyleMap.put(ItemID.CRYSTAL_BOW_810_I, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.CRYSTAL_BOW_910, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.CRYSTAL_BOW_910_I, WeaponStyle.RANGE);
+		StyleMap.put(ItemID.CRYSTAL_BOW_ATTUNED, WeaponStyle.RANGE);
+		StyleMap.put(ItemID.CRYSTAL_BOW_BASIC, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.CRYSTAL_BOW_FULL, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.CRYSTAL_BOW_FULL_I, WeaponStyle.RANGE);
+		StyleMap.put(ItemID.CRYSTAL_BOW_PERFECTED, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.CURSED_GOBLIN_BOW, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.DARK_BOW, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.DARK_BOW_12765, WeaponStyle.RANGE);
@@ -588,7 +594,7 @@ public class WeaponMap
 		StyleMap.put(ItemID.MITHRIL_KNIFEP_5657, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.MITHRIL_KNIFEP_5664, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.MITHRIL_THROWNAXE, WeaponStyle.RANGE);
-		StyleMap.put(ItemID.MITH_CROSSBOW, WeaponStyle.RANGE);
+		StyleMap.put(ItemID.MITHRIL_CROSSBOW, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.MONKEY_TALISMAN, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.MORRIGANS_JAVELIN, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.MORRIGANS_JAVELIN_23619, WeaponStyle.RANGE);
@@ -660,6 +666,9 @@ public class WeaponMap
 		StyleMap.put(ItemID.BROKEN_STAFF, WeaponStyle.MAGIC);
 		StyleMap.put(ItemID.BRYOPHYTAS_STAFF, WeaponStyle.MAGIC);
 		StyleMap.put(ItemID.BRYOPHYTAS_STAFF_UNCHARGED, WeaponStyle.MAGIC);
+		StyleMap.put(ItemID.CRYSTAL_STAFF_ATTUNED, WeaponStyle.MAGIC);
+		StyleMap.put(ItemID.CRYSTAL_STAFF_BASIC, WeaponStyle.MAGIC);
+		StyleMap.put(ItemID.CRYSTAL_STAFF_PERFECTED, WeaponStyle.MAGIC);
 		StyleMap.put(ItemID.CURSED_GOBLIN_STAFF, WeaponStyle.MAGIC);
 		StyleMap.put(ItemID.DAWNBRINGER, WeaponStyle.MAGIC);
 		StyleMap.put(ItemID.DRAMEN_STAFF, WeaponStyle.MAGIC);
